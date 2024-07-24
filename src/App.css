@@ -1,0 +1,289 @@
+:root {
+  --background-color: whitesmoke;
+  --text-color: black;
+  --link-color: #1a0dab;
+  --header-bg: linear-gradient(rgb(0, 0, 0), darkblue);
+  --header-opacity: 0.75;
+}
+
+[data-theme='dark'] {
+  --background-color: #1e1e1e;
+  --text-color: white;
+  --link-color: #4e9af1;
+  --header-bg: linear-gradient(rgb(30, 30, 30), black);
+  --header-opacity: 1;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: max-content;
+}
+
+a {
+  color: var(--link-color);
+}
+
+.header {
+  background: var(--header-bg);
+  opacity: var(--header-opacity);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  height: 5%;
+  align-content: center;
+}
+
+.header li {
+  display: inline;
+  list-style: none;
+  opacity: 100%;
+}
+
+.header button {
+  height: 100%;
+  border: none;
+  padding: 0.5rem 50px;
+  min-width: 70px;
+  background: none;
+  color: aliceblue;
+  display: inline-block;
+  flex-direction: row;
+  align-items: center;
+}
+
+#colour-theme-btn {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border: none;
+  margin-top: 10px;
+}
+
+#colour-theme-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.theme-btn {
+  background: none;
+  color: var(--text-color); 
+  /* transition: 5.25s; */
+}
+
+[data-theme='dark'] .theme-btn {
+  background: none;
+  color: var(--text-color); 
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: whitesmoke; to be replaced with image(s) later */
+}
+
+#AKK {
+  font-family: "Playwrite DE LA", cursive;
+  font-size: 1.5rem;
+  color: antiquewhite;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 50px 60px 100px 40px;
+}
+
+.pfp {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pfp-wrapper {
+  position: relative;
+  display: flex;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 450px; 
+  height: 450px; 
+  margin-left: 25%;
+  top: 10%;
+}
+
+.pfp-wrapper:hover .pfp {
+  transform: scale(1.3);
+  /* width: 350px;  */
+  /* height: 350px;  */
+}
+
+.profile h1 {
+  font-family: "Playwrite DE LA", cursive;
+}
+
+.profile h2 {
+  font-size: 2rem;
+}
+
+.profile a {
+  background-color: #4e9af1;
+  padding: 0px 10px;
+  border-radius: 20px;
+  color: #1e1e1e;
+}
+
+.profile a:hover {
+  background-color: #013774bb;
+  padding: 0px 10px;
+  border-radius: 20px;
+  color: #ffffff;
+}
+
+.about {
+  background-color: #99a0f780;
+  width: 80%;
+  border-radius: 20px;
+  padding: 20px;
+  align-content: center;
+  
+}
+
+.about h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.further-reading {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  width: 80%;
+  font-size: 1rem;
+  padding-bottom: 40px;
+}
+
+.further-reading img {
+  width: 80%;
+  padding-bottom: 50px;
+}
+
+.further-reading a {
+  padding-top: 30px;;
+}
+
+.contact {
+  background-color: #1e1e1e38;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  padding-bottom: 20px;
+}
+
+[data-theme='dark'] .contact {
+  background-color: rgba(151, 151, 151, 0.596);
+}
+
+.contact h2 {
+  font-size: 2rem;
+}
+
+.contact p {
+  font-weight: bold;
+}
+
+.contact a {
+  font-weight: bold;
+}
+
+.contact img {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+[data-theme='dark'] .contact a {
+  color: #bbb6ec;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+footer a {
+  display: flex;
+  flex-direction: row;
+}
+
+footer img {
+  width: 30px;
+  height: 30px;
+}
+
+footer button {
+  background: none;;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.skill-img img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  padding: 10px 20px;
+  height: 50px;
+  width: 50px;
+} 
+
+.skill-text span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  padding: 10px 20px;
+  height: 50px;
+  width: 50px;
+}
+
+.skill-text img {
+  padding: 0;
+  height: 0;
+  width: 0;
+  transition: 2s;
+}
+
+.skill-img span {
+  padding: 0;
+  height: 0;
+  width: 0;
+  font-size: 0;
+  transition: 2s;
+  /* transition-delay: 2s;  make this shit smoother somehow */
+}
