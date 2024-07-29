@@ -1,12 +1,4 @@
 :root {
-  --background-color: whitesmoke;
-  --text-color: black;
-  --link-color: #1a0dab;
-  --header-bg: linear-gradient(rgb(0, 0, 0), darkblue);
-  --header-opacity: 0.75;
-}
-
-[data-theme='dark'] {
   --background-color: #1e1e1e;
   --text-color: white;
   --link-color: #4e9af1;
@@ -14,6 +6,13 @@
   --header-opacity: 1;
 }
 
+[data-theme='light'] {
+  --background-color: whitesmoke;
+  --text-color: black;
+  --link-color: #1a0dab;
+  --header-bg: linear-gradient(rgb(0, 0, 0), darkblue);
+  --header-opacity: 0.75;
+}
 
 body {
   background-color: var(--background-color);
@@ -78,12 +77,11 @@ a {
   color: var(--text-color); 
   position: sticky;
   /* top: 1; */
- 
 }
 
-[data-theme='dark'] .theme-btn {
+[data-theme='light'] .theme-btn {
   background: none;
-  color: var(--text-color); 
+  color: white
 }
 
 .container {
@@ -103,31 +101,38 @@ a {
 .profile {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: auto; */
   align-items: center;
-  padding: 50px 60px 100px 40px;
+  padding: 50px 60px 0px 40px;
 }
 
+/* .left-profile {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+} */
+
+.profile a {
+  display: flex;
+}
 
 .pfp-wrapper {
   background-image: url('/public/pattern.jpg');
-  /* opacity: 50%; */
   position: relative;
   display: flex;
   border-radius: 50%;
-  /* overflow: hidden; */
   justify-content: center;
   align-items: center;
   width: 450px; 
   height: 450px; 
   margin-left: 25%;
-  top: 10%;
+  /* margin-top: 120px; */
   animation: slow-rotate 60s linear infinite;
 }
+
 .pfp {
   width: 440px;
   height: 440px;
   background-color: rgba(0, 0, 0, 0);
-  display: block;
   transition: transform 0.3s ease-in-out;
   border: 5px solid transparent; 
   position: absolute;
@@ -189,7 +194,7 @@ a {
   display: inherit;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
 .further-reading {
@@ -222,20 +227,19 @@ a {
   padding-bottom: 20px;
 }
 
-
-[data-theme='dark'] .contact {
-  background-color: rgba(151, 151, 151, 0.596);
+[data-theme='light'] .contact {
+  background-color: #99a0f780;
 }
 
 .contact section {
-  /* background-color: red; */
-  /* margin-bottom: 20px; */
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   padding: 10px;
+  width: 40%;
 }
 
 .contact a {
   font-weight: bold;
-  /* background-color: red; */
 }
 
 .contact h2 {
@@ -246,33 +250,28 @@ a {
   font-weight: bold;
 }
 
-
 .contact img {
   width: 30px;
   height: 30px;
-  padding-right: 20px;
-  /* display: flex; */
-  /* flex-direction: row; */
+  display: flex;
+  /* background-color: #4e9af1; */
 }
 
-.geo img {
-  padding-bottom: ;
-}
-
-[data-theme='dark'] .contact a {
-  color: #bbb6ec;
+[data-theme='light'] .contact a {
+  color: #867cdf;
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
 }
 
 footer a {
-  display: flex;
-  flex-direction: row;
+  padding-bottom: 20px;
 }
 
 footer img {
@@ -281,22 +280,24 @@ footer img {
 }
 
 footer button {
-  background: none;;
+  padding: 20px;
 }
 
 .skills {
   display: flex;
-  flex-wrap: wrap;
+  width: 80%;
   justify-content: center;
   padding-bottom: 50px;
+  height: 100px;
 }
 
 .skill-img img {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  backface-visibility: hidden;
+  transition: 1.5s ease-in-out;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* backface-visibility: hidden; */
   padding: 10px 20px;
   height: 50px;
   width: 50px;
@@ -307,27 +308,27 @@ footer button {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  backface-visibility: hidden;
+  /* backface-visibility: hidden; */
   padding: 10px 20px;
   height: 50px;
   width: 50px;
-  font-family: "Courgette";
+  font-family: "Comic Neue", cursive;
 }
 
 .skill-text img {
+  transition: 1.5s ease-in-out;
   padding: 0;
   height: 0;
   width: 0;
-  transition: 2s;
 }
 
 .skill-img span {
+  transition: 1.5s ease-in-out;
   padding: 0;
   height: 0;
   width: 0;
   font-size: 0;
-  transition: 2s;
-  /* transition-delay: 2s;  make this shit smoother somehow */
+  /* transition-delay: 1.5s;  make this shit smoother somehow */
 }
 
 .particles {

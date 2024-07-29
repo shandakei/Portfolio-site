@@ -7,7 +7,7 @@ import './App.css'
 function App() {
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
   const [isHovered, setIsHovered] = useState(false);
 
   // useEffect(() => {
@@ -24,6 +24,7 @@ function App() {
   const toggleTheme = (mode) => {
     setTheme(mode);
     document.documentElement.setAttribute('data-theme', mode);
+    setDropdownVisible(false)
   }
 
   const dropdownVariants = {
@@ -34,20 +35,20 @@ function App() {
   
 
   const skills = [
-    { name: 'html', img: '/public/html.png' },
-    { name: 'css', img: '/public/css.png' },
-    { name: 'java-script', img: '/public/java-script.png' },
-    { name: 'react', img: '/public/react.png' },
-    { name: 'github', img: '/public/github.png' },
-    { name: 'express', img: '/public/express.png' },
-    { name: 'jest', img: '/public/jest.png' },
-    { name: 'nodejs', img: '/public/nodejs.png' },
-    { name: 'database', img: '/public/database.png' },
-    { name: 'non-relational', img: '/public/non-relational.png' },
-    { name: 'postgress', img: '/public/postgress.png' },
-    { name: 'mongodb', img: '/public/mongodb.png' },
-    { name: 'miro', img: '/public/miro.png' },
-    { name: 'trello', img: '/public/trello.png' }
+    { name: 'HTML', img: '/public/html.png' },
+    { name: 'CSS', img: '/public/css.png' },
+    { name: 'JavaScript', img: '/public/java-script.png' },
+    { name: 'REACT', img: '/public/react.png' },
+    { name: 'GitHub', img: '/public/github.png' },
+    { name: 'Express', img: '/public/express.png' },
+    { name: 'Jest', img: '/public/jest.png' },
+    { name: 'Nodejs', img: '/public/nodejs.png' },
+    { name: 'Database', img: '/public/database.png' },
+    // { name: '', img: '/public/non-relational.png' },
+    { name: 'Postgress', img: '/public/postgress.png' },
+    { name: 'MongoDB', img: '/public/mongodb.png' },
+    { name: 'Miro', img: '/public/miro.png' },
+    { name: 'Trello', img: '/public/trello.png' }
   ]
   
   const scrollToSection = (id, className) => {
@@ -70,7 +71,7 @@ function App() {
         <div className="header">
           <p><span id='AKK' >AKK</span></p> 
           <nav>
-            <button onClick={() => scrollToSection(null, 'skills')} aria-label="Scroll to intro">Skills</button>
+            <button onClick={() => scrollToSection(null, 'content')} aria-label="Scroll to intro">Skills</button>
             <button onClick={() => scrollToSection(null, 'about')} aria-label="Scroll to about">About</button>
             <button onClick={() => scrollToSection(null, 'further-reading')} aria-label="Scroll to projects">Projects</button>
           </nav>
@@ -85,24 +86,26 @@ function App() {
           variants={dropdownVariants}
           className="dropdown-menu"
         >
-          <button className='theme-btn' onClick={() => toggleTheme('light')}>Light mode</button>
           <button className='theme-btn' onClick={() => toggleTheme('dark')}>Dark mode</button>
+          <button className='theme-btn' onClick={() => toggleTheme('light')}>Light mode</button>
         </motion.div>
           </div>
         
         <div className="profile">
-          <section>
-          <h3>Hello! My name is</h3>
-          <h1>Alexander Klaus Kampfer</h1>         
-          <h2>Software Engineering</h2>
-          </section>
+          <div className="left-profile">
+            <section>
+            <h3>Hello! My name is</h3>
+            <h1>Alexander Klaus Kampfer</h1>         
+            <h2>Software Engineering</h2>
+          <a href="https://drive.google.com/file/d/1iij2Lx88_IVCqUuC5jSRuzylCFT3Ljw-/view?usp=sharing" target='_blank'><p>Click here for my Resume</p></a>
+            </section>
+          </div>
           <section>
           <div className="pfp-wrapper">
             <div className="pfp-border"></div>
             <img src="/public/pfp1.png" className='pfp' alt='profile' />
           </div>
           </section>
-          <a href="https://drive.google.com/file/d/1iij2Lx88_IVCqUuC5jSRuzylCFT3Ljw-/view?usp=sharing" target='_blank'><p>Click here for my Resume</p></a>
         </div>
 
         <br />
@@ -117,28 +120,17 @@ function App() {
               <motion.div
           
                 className={isHovered ? 'skill-text' : 'skill-img'}
-                // transition={{ duration: 0.25 }} //transition in?
                 key={skill.name}
-                // style={{ perspective: '1000px' }}
                 onMouseLeave={() => setIsHovered(false)}
-                  onMouseEnter={() => setIsHovered(true)}
+                onMouseEnter={() => setIsHovered(true)}
                 >
                 <motion.img
                   src={skill.img}
                   alt={skill.name}
-                  // className='skill-img'
-                  // initial={{ opacity: 1, rotateX: 0, display: "block" }}
-                  // whileHover={{ opacity: 0, rotateX: 0, display: "hidden" }}
-                  // transition={{ duration: 0.25 }}
                   />
                 <motion.span
-                  // {/* // className='skill-text' */}
                   dangerouslySetInnerHTML={{__html: skill.name}} 
-                  // initial={{ opacity: 1, rotateX: 0, display: "block"}}
-                  // whileHover={{ opacity: 1, rotateX: 0, display: "block"}}
-                  // {/* // transition={{ duration: 0.25 }} */}
                 > 
-                  {/* { skill.name } */}
                  </motion.span> 
               </motion.div>
             ))}
@@ -201,20 +193,20 @@ function App() {
             <img src="/public/linkedin-icon.png" alt="linkedin-icon" />
             <a href="https://www.linkedin.com/in/alexander-k-kampfer/" target='_blank'>LinkedIn</a> 
           </section>
-          <section className='geo'>
+          
             {/* <img src="/public/location-icon.png" alt="location-icon" /> */}
             <p>Location: North Sydney, NSW</p>
             <p>Timezone: GMT+10</p>
-          </section>
+          
         </div>
 
         <footer>
           <p>Created using REACT, Updated @2024</p>
-          <a href=''>References</a> 
+          {/* <a href=''>References</a>  */}
           <a href='https://generalassemb.ly/' target='_blank'>Study with General Assembly</a>
-          <a href=''>something</a>
+          {/* <a href=''>something</a> */}
 
-          <button onClick={() => scrollToSection('AKK', null)} ><img src="/public/up-arrow.png" alt="up-arrow-image-scroll-to-top" /></button>
+          <button onClick={() => scrollToSection(null, 'pfp-wrapper')} ><img src="/public/up-arrow.png" alt="up-arrow-image-scroll-to-top" /></button>
         </footer>
 
         
