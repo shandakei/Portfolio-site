@@ -1,14 +1,21 @@
-import React, {useState} from 'react';
-import './App.css'
+import React, {useState, useEffect} from 'react';
 import { motion } from 'framer-motion';
-// import './styles.css'
-import { scroll } from "framer-motion"
+// import {particlesJS} from 'particles.js';
+// import * as ParticlesJS from './particles.json';
+import './App.css'
 
 function App() {
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [theme, setTheme] = useState('light');
   const [isHovered, setIsHovered] = useState(false);
+
+  // useEffect(() => {
+  //   particlesJS('particles-js', particlesConfig);
+  // }, []);
+  // particlesJS.load('particles-js','assets/particles.json', function() {
+  //   console.log('callback - particles.js config loaded');
+  // });
 
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
@@ -58,8 +65,8 @@ function App() {
   return (
     <>
       <div className="container">
-
-                                    {/* add onclick fn to AKK to "/" */}
+        {/* <div id="particles-js" className="particles"></div> */}
+                                      {/* add onclick fn to AKK to "/" */}
         <div className="header">
           <p><span id='AKK' >AKK</span></p> 
           <nav>
@@ -71,7 +78,6 @@ function App() {
             <button id='colour-theme-btn' onClick={toggleDropdown}>
               <img src="/public/colour-img-light.png" id='colour-theme-img' alt='change-colour-theme'/>
             </button>
-        </div>
 
         <motion.div 
           initial="hidden" 
@@ -82,6 +88,7 @@ function App() {
           <button className='theme-btn' onClick={() => toggleTheme('light')}>Light mode</button>
           <button className='theme-btn' onClick={() => toggleTheme('dark')}>Dark mode</button>
         </motion.div>
+          </div>
         
         <div className="profile">
           <section>
@@ -91,6 +98,7 @@ function App() {
           </section>
           <section>
           <div className="pfp-wrapper">
+            <div className="pfp-border"></div>
             <img src="/public/pfp1.png" className='pfp' alt='profile' />
           </div>
           </section>
@@ -139,24 +147,35 @@ function App() {
 
           <div className="about">
             <h2>About</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit magna consequat himenaeos, mollis quam sociosqu pretium commodo cubilia elementum volutpat. Donec curae consequat himenaeos iaculis semper pretium erat hendrerit arcu sodales conubia velit egestas a, sollicitudin neque congue primis taciti odio suspendisse lobortis mauris fames nec nibh pellentesque. Lobortis tempor accumsan torquent platea mus cursus mattis, taciti fusce curabitur tincidunt pharetra egestas senectus, vivamus ultrices nec hac risus molestie. Sociosqu urna felis parturient pulvinar gravida at facilisis bibendum, nibh mi phasellus orci pellentesque et accumsan eu inceptos, vitae facilisi ullamcorper suscipit curae varius proin. Habitant platea per ad facilisis aptent, vulputate massa nullam curabitur viverra, faucibus velit aliquam mus. Sem consequat vivamus purus senectus in lacinia per sed semper facilisis non, facilisi nunc ut pharetra tempor id netus nisi laoreet.</p>
+            <p>I previously worked in teaching, management, and business. Currently, I am part of the General Assembly alumni and working to further my career as a software engineer in Sydney, AUS.</p>
+            <p>I recently moved to Sydney, Australia, having worked and studied overseas my whole life. With my European and Asian background, I’m very open-minded when it comes to new cultures and work environments. Living in London (UK), Johannesburg (ZA), and Shanghai (CN), and having family in several other countries, has given me an international perspective.</p>
+            <p>My most recent work has been in React. Aside from upskilling in basic languages, my upcoming collaborative projects will incorporate new elements, whether in language or tools.</p>
           </div>
 
           <div className='further-reading'>
             <h3>Petrol Location App</h3>
             <img src="/public/petrol.png" ></img>
             <section>Collaborated on a group project using GitHub to develop a single-page application (SPA) for locating and finding information about petrol stations. The app features an interactive map powered by multiple Google API services, allowing users to search and filter stations by postcode or coordinates. Sidebars enhance usability with search and filter functions. While currently deployed in Melbourne, Australia, the database supports global searches. The user interface provides comprehensive details about each station, including owner information, status, and address, ensuring a user-friendly and informative experience.</section>
-            <a href="">Visit site</a>
+            {/* <a href="">Visit site</a> */}
             <br />
             <h3>Xiao'Er - Interactive Novel</h3>
             <img src="/public/novel.png" ></img>
             <section>Developed an interactive novel leveraging React, HTML, CSS, and JavaScript. This project includes multiple branching storylines where user choices influence the plot's direction and outcomes. The narrative features rich character interactions and a variety of endings, encouraging readers to explore different paths. Progress-saving functionality allows users to pick up where they left off, and unlockable content provides additional layers to the story. The interface is designed to be engaging and intuitive, ensuring a seamless and immersive reading experience.</section>
-            <a href="">Visit site</a>
+            {/* <a href="">Visit site</a> */}
             <br />
             <h3>Comican - Multiple File CRUD </h3>
             <img src="/public/comican.png" ></img>
             <section>For this CRUD app, a platform was created where users can upload and share their fan art, comics, manga, doujinshi, and other creative works. Users can click on the title of an intriguing post to view a detailed page, which may include multiple files and images that can also be viewed as original source images. <br /> Once registered, users can freely add, edit, delete, and favourite posts without any limitations on the number of uploads or file size restrictions (though larger uploads may take longer to sync). Whether users are active posters or avid readers, they are encouraged to engage and share their thoughts in the post comment sections.</section>
-            <a href="">Visit site</a>
+            {/* <a href="https://ga-project-2-864h.onrender.com/" target='_blank'>Visit site</a> */}
+            <br />
+            <h3>Arcade X's & O's SPA </h3>
+            <img src="/public/startscreen.png" ></img>
+            <section>This two-player web application is designed for shared play on a single device. The start screen welcomes users, and with a simple click on the start button, they can dive straight into the game. At the conclusion of each round, players can press the "Play Again" button to keep track of the rounds played without needing to reload the page. Additionally, a music player toggle at the top enhances the gaming atmosphere.</section>
+            <br />
+            <h3>PSQL - OMDB</h3>
+            <img src="/public/omdb.png" ></img>
+            <section>This live page showcases a user-friendly site for searching movies by title, using data from the OMDB API. Users can find detailed information on single or multiple movies, with options to retrieve and display additional data. Other API-based project versions are also available.</section>
+            {/* <a href="">Visit site</a> */}
           </div>
 
         </div>
@@ -165,21 +184,28 @@ function App() {
           <h2>Contact</h2>
 
           <h3>Please feel free to contact me at anytime and for any reason!</h3>
-          <img src="/public/phone-call.png" alt="phone-icon" />
-          <p>+61 430 709 726</p>
 
-          <img src="/public/email.png" alt="email-icon" />
-          <p>alexanderkkampfer@gmail.com</p>
-  
-          <img src="/public/github.png" alt="github-icon" />
-          <a href="https://github.com/shandakei" target='_blank'>GitHub</a>
-          <br />
-          <img src="/public/linkedin-icon.png" alt="linkedin-icon" />
-          <a href="https://www.linkedin.com/in/alexander-k-kampfer/" target='_blank'>LinkedIn</a>
-          <br />
-          <img src="/public/location-icon.png" alt="location-icon" />
-          <p>Location: North Sydney, NSW</p>
-          <p>Timezone: GMT+10</p>
+          <section>
+          <img src="/public/phone-call.png" alt="phone-icon" />
+          <span>+61 430 709 726</span>
+          </section>
+          <section>
+            <img src="/public/email.png" alt="email-icon" />
+            <span>alexanderkkampfer@gmail.com</span>
+          </section>
+          <section>
+            <img src="/public/github.png" alt="github-icon" />
+            <a href="https://github.com/shandakei" target='_blank'>GitHub</a>
+          </section>
+          <section>
+            <img src="/public/linkedin-icon.png" alt="linkedin-icon" />
+            <a href="https://www.linkedin.com/in/alexander-k-kampfer/" target='_blank'>LinkedIn</a> 
+          </section>
+          <section className='geo'>
+            {/* <img src="/public/location-icon.png" alt="location-icon" /> */}
+            <p>Location: North Sydney, NSW</p>
+            <p>Timezone: GMT+10</p>
+          </section>
         </div>
 
         <footer>

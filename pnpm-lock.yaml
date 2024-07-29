@@ -11,12 +11,18 @@ importers:
       framer-motion:
         specifier: ^11.3.8
         version: 11.3.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      particles.js:
+        specifier: ^2.0.0
+        version: 2.0.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      react-tsparticles:
+        specifier: ^2.12.2
+        version: 2.12.2(react@18.3.1)
     devDependencies:
       '@types/react':
         specifier: ^18.3.3
@@ -1098,6 +1104,9 @@ packages:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
 
+  particles.js@2.0.0:
+    resolution: {integrity: sha512-8e0JIqkRbMMPlFBnF9f+92hX1s07jdkd3tqB8uHE9L+cwGGjIYjQM7QLgt0FQ5MZp6SFFYYDm/Y48pqK3ZvJOQ==}
+
   path-exists@4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
     engines: {node: '>=8'}
@@ -1149,6 +1158,12 @@ packages:
   react-refresh@0.14.2:
     resolution: {integrity: sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==}
     engines: {node: '>=0.10.0'}
+
+  react-tsparticles@2.12.2:
+    resolution: {integrity: sha512-/nrEbyL8UROXKIMXe+f+LZN2ckvkwV2Qa+GGe/H26oEIc+wq/ybSG9REDwQiSt2OaDQGu0MwmA4BKmkL6wAWcA==}
+    deprecated: '@tsparticles/react is the new version, please use that'
+    peerDependencies:
+      react: '>=16'
 
   react@18.3.1:
     resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
@@ -1273,6 +1288,10 @@ packages:
 
   tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
+
+  tsparticles-engine@2.12.0:
+    resolution: {integrity: sha512-ZjDIYex6jBJ4iMc9+z0uPe7SgBnmb6l+EJm83MPIsOny9lPpetMsnw/8YJ3xdxn8hV+S3myTpTN1CkOVmFv0QQ==}
+    deprecated: starting from tsparticles v3 the packages are now moved to @tsparticles/package-name instead of tsparticles-package-name
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -2535,6 +2554,8 @@ snapshots:
     dependencies:
       callsites: 3.1.0
 
+  particles.js@2.0.0: {}
+
   path-exists@4.0.0: {}
 
   path-is-absolute@1.0.1: {}
@@ -2574,6 +2595,11 @@ snapshots:
   react-is@16.13.1: {}
 
   react-refresh@0.14.2: {}
+
+  react-tsparticles@2.12.2(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+      tsparticles-engine: 2.12.0
 
   react@18.3.1:
     dependencies:
@@ -2746,6 +2772,8 @@ snapshots:
   to-fast-properties@2.0.0: {}
 
   tslib@2.6.3: {}
+
+  tsparticles-engine@2.12.0: {}
 
   type-check@0.4.0:
     dependencies:
