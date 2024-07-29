@@ -72,8 +72,9 @@ function App() {
           <p><span id='AKK' >AKK</span></p> 
           <nav>
             <button onClick={() => scrollToSection(null, 'content')} aria-label="Scroll to intro">Skills</button>
-            <button onClick={() => scrollToSection(null, 'about')} aria-label="Scroll to about">About</button>
+            <button onClick={() => scrollToSection(null, 'skills')} aria-label="Scroll to about">About</button>
             <button onClick={() => scrollToSection(null, 'further-reading')} aria-label="Scroll to projects">Projects</button>
+            <button onClick={() => scrollToSection(null, 'contact-scroll')} aria-label="Scroll to contact">Contact</button>
           </nav>
 
             <button id='colour-theme-btn' onClick={toggleDropdown}>
@@ -139,9 +140,9 @@ function App() {
 
           <div className="about">
             <h2>About</h2>
-            <p>I previously worked in teaching, management, and business. Currently, I am part of the General Assembly alumni and working to further my career as a software engineer in Sydney, AUS.</p>
-            <p>I recently moved to Sydney, Australia, having worked and studied overseas my whole life. With my European and Asian background, I’m very open-minded when it comes to new cultures and work environments. Living in London (UK), Johannesburg (ZA), and Shanghai (CN), and having family in several other countries, has given me an international perspective.</p>
-            <p>My most recent work has been in React. Aside from upskilling in basic languages, my upcoming collaborative projects will incorporate new elements, whether in language or tools.</p>
+            <p>I previously worked in teaching, management, and business. Currently, I'm a General Assembly graduate, focused on building my career as a software engineer in Sydney.</p>
+            <p>I recently returned to Australia after spending my life working and studying overseas. With a European and Asian backgrounds, I'm adaptable to new cultures and work environments. Having lived in London, Johannesburg, and Shanghai, and with family in several other countries,  I've internalized an international perspective.</p>
+            <p>Lately, I've been focused on React and stream functions. Along with sharpening my skills in fundamentals, I'm excited about upcoming collaborative projects with other alumni where I'll be working with new languages and tools.</p>
           </div>
 
           <div className='further-reading'>
@@ -152,26 +153,26 @@ function App() {
             <br />
             <h3>Xiao'Er - Interactive Novel</h3>
             <img src="/public/novel.png" ></img>
-            <section>Developed an interactive novel leveraging React, HTML, CSS, and JavaScript. This project includes multiple branching storylines where user choices influence the plot's direction and outcomes. The narrative features rich character interactions and a variety of endings, encouraging readers to explore different paths. Progress-saving functionality allows users to pick up where they left off, and unlockable content provides additional layers to the story. The interface is designed to be engaging and intuitive, ensuring a seamless and immersive reading experience.</section>
+            <section>Developed an interactive novel leveraging React, HTML, CSS, and JavaScript. This project includes multiple branching storylines where user choices influence the plot's direction and outcomes. The narrative features character interactions and multiple endings, encouraging readers to explore different paths. Progress-saving functionality allows users to pick up where they left off, and unlockable content provides additional layers to the story. The interface is designed to be engaging and intuitive, ensuring users maintain their immersion as the plot continues.</section>
             {/* <a href="">Visit site</a> */}
             <br />
             <h3>Comican - Multiple File CRUD </h3>
             <img src="/public/comican.png" ></img>
-            <section>For this CRUD app, a platform was created where users can upload and share their fan art, comics, manga, doujinshi, and other creative works. Users can click on the title of an intriguing post to view a detailed page, which may include multiple files and images that can also be viewed as original source images. <br /> Once registered, users can freely add, edit, delete, and favourite posts without any limitations on the number of uploads or file size restrictions (though larger uploads may take longer to sync). Whether users are active posters or avid readers, they are encouraged to engage and share their thoughts in the post comment sections.</section>
+            <section>For this CRUD app, a platform was created where users can upload and share their fan art, comics, manga, doujinshi, and other creative works. Users can click on the title of a post to view a detailed page, which may include multiple files and images that can also be viewed as original source images. <br /> Once registered, users can freely add, edit, delete, and favourite posts without any limitations on the number of uploads or file size restrictions (though larger uploads may take longer to sync). Whether users are active posters or avid readers, they are encouraged to engage and share their thoughts in the post comment sections.</section>
             {/* <a href="https://ga-project-2-864h.onrender.com/" target='_blank'>Visit site</a> */}
             <br />
-            <h3>Arcade X's & O's SPA </h3>
+            <h3>Arcade X's & O's - SPA </h3>
             <img src="/public/startscreen.png" ></img>
             <section>This two-player web application is designed for shared play on a single device. The start screen welcomes users, and with a simple click on the start button, they can dive straight into the game. At the conclusion of each round, players can press the "Play Again" button to keep track of the rounds played without needing to reload the page. Additionally, a music player toggle at the top enhances the gaming atmosphere.</section>
             <br />
             <h3>PSQL - OMDB</h3>
-            <img src="/public/omdb.png" ></img>
-            <section>This live page showcases a user-friendly site for searching movies by title, using data from the OMDB API. Users can find detailed information on single or multiple movies, with options to retrieve and display additional data. Other API-based project versions are also available.</section>
+            <img src="/public/omdb.jpg" ></img>
+            <section>This live page showcases a user-friendly site for searching movies by title, using data from the OMDB API. Users can find detailed information on single or multiple movies, including ratings, plot summaries, and cast lists. The interface is designed to be intuitive, providing a seamless experience for retrieving and displaying additional data like director names, release dates, and genres. Other versions of this project, utilizing different APIs such as TMDB API, are also available.</section>
             {/* <a href="">Visit site</a> */}
+            <div className='contact-scroll'></div>
           </div>
 
         </div>
-
         <div className="contact">
           <h2>Contact</h2>
 
@@ -206,7 +207,7 @@ function App() {
           <a href='https://generalassemb.ly/' target='_blank'>Study with General Assembly</a>
           {/* <a href=''>something</a> */}
 
-          <button onClick={() => scrollToSection(null, 'pfp-wrapper')} ><img src="/public/up-arrow.png" alt="up-arrow-image-scroll-to-top" /></button>
+          <button onClick={() => scrollToSection(null, 'profile')} ><img src="/public/up-arrow.png" alt="up-arrow-image-scroll-to-top" /></button>
         </footer>
 
         

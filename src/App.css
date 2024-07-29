@@ -24,6 +24,18 @@ a {
   color: var(--link-color);
 }
 
+p {
+  font-family: Verdana, sans-serif;
+}
+
+section {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+h3 {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
 .header {
   background: var(--header-bg);
   opacity: var(--header-opacity);
@@ -181,6 +193,7 @@ a {
   width: 80%;
   border-radius: 20px;
   padding: 20px;
+  padding-top: 10px;
   align-content: center;
   
 }
@@ -204,7 +217,7 @@ a {
   padding-top: 50px;
   width: 80%;
   font-size: 1rem;
-  padding-bottom: 40px;
+  padding-bottom: 70px;
 }
 
 .further-reading img {
@@ -214,6 +227,10 @@ a {
 
 .further-reading a {
   padding-top: 30px;;
+}
+
+.further-reading section {
+  padding-bottom: 20px;
 }
 
 .contact {
@@ -240,7 +257,10 @@ a {
 
 .contact a {
   font-weight: bold;
+  color: #dcd8ff;
+  text-shadow: #000000;
 }
+
 
 .contact h2 {
   font-size: 2rem;
@@ -259,7 +279,13 @@ a {
 
 [data-theme='light'] .contact a {
   color: #867cdf;
+  text-shadow: #000000;
 }
+[data-theme='light'] .contact a:hover {
+  color: #000000;
+  text-shadow: #ffffff;
+}
+
 
 footer {
   display: grid;
@@ -281,6 +307,7 @@ footer img {
 
 footer button {
   padding: 20px;
+  background-color: #1e1e1e5b;
 }
 
 .skills {
@@ -289,15 +316,11 @@ footer button {
   justify-content: center;
   padding-bottom: 50px;
   height: 100px;
+  font-size: 20px;
 }
 
 .skill-img img {
   transition: 1.5s ease-in-out;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* backface-visibility: hidden; */
   padding: 10px 20px;
   height: 50px;
   width: 50px;
@@ -308,7 +331,6 @@ footer button {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  /* backface-visibility: hidden; */
   padding: 10px 20px;
   height: 50px;
   width: 50px;
@@ -323,12 +345,10 @@ footer button {
 }
 
 .skill-img span {
-  transition: 1.5s ease-in-out;
   padding: 0;
   height: 0;
   width: 0;
   font-size: 0;
-  /* transition-delay: 1.5s;  make this shit smoother somehow */
 }
 
 .particles {
@@ -338,7 +358,6 @@ footer button {
   top: 0;
   left: 0;
   z-index: -2;
-  /* color: red; */
 }
 
 #particles {
@@ -348,5 +367,4 @@ footer button {
   top: 0;
   left: 0;
   z-index: -2;
-  /* color: red; */
 }
