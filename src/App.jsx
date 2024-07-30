@@ -26,20 +26,20 @@ function App() {
   
 
   const skills = [
-    { name: 'HTML', img: 'public/html.png' },
-    { name: 'CSS', img: 'public/css.png' },
-    { name: 'JavaScript', img: 'public/java-script.png' },
-    { name: 'REACT', img: 'public/react.png' },
-    { name: 'GitHub', img: 'public/github.png' },
-    { name: 'Express', img: 'public/express.png' },
-    { name: 'Jest', img: 'public/jest.png' },
-    { name: 'Nodejs', img: 'public/nodejs.png' },
-    { name: 'Database', img: 'public/database.png' },
-    // { name: '', img: '/public/non-relational.png' },
-    { name: 'Postgress', img: 'public/postgress.png' },
-    { name: 'MongoDB', img: 'public/mongodb.png' },
-    { name: 'Miro', img: 'public/miro.png' },
-    { name: 'Trello', img: 'public/trello.png' }
+    { name: 'HTML', img: '/html.png' },
+    { name: 'CSS', img: '/css.png' },
+    { name: 'JavaScript', img: '/java-script.png' },
+    { name: 'REACT', img: '/react.png' },
+    { name: 'GitHub', img: '/github.png' },
+    { name: 'Express', img: '/express.png' },
+    { name: 'Jest', img: '/jest.png' },
+    { name: 'Nodejs', img: '/nodejs.png' },
+    { name: 'Database', img: '/database.png' },
+    // { name: '', img: '//non-relational.png' },
+    { name: 'Postgress', img: '/postgress.png' },
+    { name: 'MongoDB', img: '/mongodb.png' },
+    { name: 'Miro', img: '/miro.png' },
+    { name: 'Trello', img: '/trello.png' }
   ]
   
   const scrollToSection = (id, className) => {
