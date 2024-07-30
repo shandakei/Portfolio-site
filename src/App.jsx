@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import { motion } from 'framer-motion';
-// import {particlesJS} from 'particles.js';
-// import * as ParticlesJS from './particles.json';
 import './App.css'
 
 function App() {
@@ -9,13 +7,6 @@ function App() {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [theme, setTheme] = useState('dark');
   const [isHovered, setIsHovered] = useState(false);
-
-  // useEffect(() => {
-  //   particlesJS('particles-js', particlesConfig);
-  // }, []);
-  // particlesJS.load('particles-js','assets/particles.json', function() {
-  //   console.log('callback - particles.js config loaded');
-  // });
 
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
@@ -66,8 +57,7 @@ function App() {
   return (
     <>
       <div className="container">
-        {/* <div id="particles-js" className="particles"></div> */}
-                                      {/* add onclick fn to AKK to "/" */}
+
         <div className="header">
           <p><span id='AKK' >AKK</span></p> 
           <nav>
@@ -110,7 +100,7 @@ function App() {
         </div>
 
         <br />
-        {/* <hr /> */}
+
 
         <div className="content">
           <h3>Skills</h3>
