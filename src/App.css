@@ -211,22 +211,23 @@ h3 {
 }
 
 .further-reading {
-  display: inherit;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   padding-top: 50px;
-  width: 80%;
+  width: 90%;
   font-size: 1rem;
-  padding-bottom: 70px;
+  gap:40px;
 }
 
 .further-reading img {
-  width: 80%;
+  width: 100%;
+  padding-left: 10px;
   padding-bottom: 50px;
 }
 
 .further-reading a {
-  padding-top: 30px;;
+  padding-top: 30px;
 }
 
 .further-reading section {
@@ -274,7 +275,6 @@ h3 {
   width: 30px;
   height: 30px;
   display: flex;
-  /* background-color: #4e9af1; */
 }
 
 [data-theme='light'] .contact a {
@@ -290,8 +290,6 @@ h3 {
 footer {
   display: grid;
   grid-template-rows: 3fr 1fr;
-  /* flex-direction: column; */
-  /* justify-content: center; */
   align-items: center;
   text-align: center;
 }
@@ -317,6 +315,7 @@ footer button {
   padding-bottom: 50px;
   height: 100px;
   font-size: 20px;
+  
 }
 
 .skill-img img {
