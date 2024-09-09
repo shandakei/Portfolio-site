@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { motion } from 'framer-motion';
 import './App.css'
 
@@ -41,7 +41,7 @@ function App() {
     { name: 'Miro', img: 'public/miro.png' },
     { name: 'Trello', img: 'public/trello.png' }
   ]
-  console.log(skills[0].img)
+  
   const scrollToSection = (id, className) => {
     let element = null
     if (id) {
@@ -112,7 +112,9 @@ function App() {
           
                 className={isHovered ? 'skill-text' : 'skill-img'}
                 key={skill.name}
-                onMouseLeave={() => setIsHovered(false)}
+                onMouseLeave={() => {
+                  setTimeout(() => setIsHovered(false), 300)
+              }}
                 onMouseEnter={() => setIsHovered(true)}
                 >
                 <motion.img
@@ -131,7 +133,7 @@ function App() {
           <div className="about">
             <h2>About</h2>
             <p>I previously worked in teaching, management, and business. Currently, I'm a General Assembly graduate, focused on building my career as a software engineer in Sydney.</p>
-            <p>I recently returned to Australia after spending my life working and studying overseas. With a European and Asian backgrounds, I'm adaptable to new cultures and work environments. Having lived in London, Johannesburg, and Shanghai, and with family in several other countries,  I've internalized an international perspective.</p>
+            <p>I recently returned to Australia after spending my life working and studying overseas. With European and Asian backgrounds, I'm adaptable to new cultures and work environments. Having lived in London, Johannesburg, and Shanghai, and with family in several other countries,  I've internalized an international perspective.</p>
             <p>Lately, I've been focused on React and stream functions. Along with sharpening my skills in fundamentals, I'm excited about upcoming collaborative projects with other alumni where I'll be working with new languages and tools.</p>
           </div>
 

@@ -1,3 +1,4 @@
+
 :root {
   --background-color: #1e1e1e;
   --text-color: white;
@@ -17,7 +18,8 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  height: max-content;
+  /* height: max-content; */
+  min-width: 1200px;
 }
 
 a {
@@ -34,6 +36,7 @@ section {
 
 h3 {
   font-family: 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
 }
 
 .header {
@@ -118,11 +121,6 @@ h3 {
   padding: 50px 60px 0px 40px;
 }
 
-/* .left-profile {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-} */
-
 .profile a {
   display: flex;
 }
@@ -178,6 +176,7 @@ h3 {
   padding: 0px 10px;
   border-radius: 20px;
   color: #1e1e1e;
+  border: 2px solid #013774bb;
 }
 
 .profile a:hover {
@@ -186,6 +185,16 @@ h3 {
   border-radius: 20px;
   color: #ffffff;
   border: 2px solid whitesmoke;
+}
+
+.left-profile a {
+  width: 60%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+[data-theme='light'] .left-profile a {
+  color: #c8d9fd;
 }
 
 .about {
@@ -214,7 +223,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 80px;
   width: 90%;
   font-size: 1rem;
   gap:40px;
@@ -259,7 +268,11 @@ h3 {
 .contact a {
   font-weight: bold;
   color: #dcd8ff;
-  text-shadow: #000000;
+  text-shadow: 1px solid #000000;
+}
+.contact a:hover {
+  color: #14b5dd;
+  text-shadow: 1px solid #ffffff;
 }
 
 
@@ -319,10 +332,10 @@ footer button {
 }
 
 .skill-img img {
-  transition: 1.5s ease-in-out;
   padding: 10px 20px;
   height: 50px;
   width: 50px;
+  transition: 1s ease-in-out;
 } 
 
 .skill-text span {
@@ -334,13 +347,19 @@ footer button {
   height: 50px;
   width: 50px;
   font-family: "Comic Neue", cursive;
+  transition: 1s ease-in-out;
 }
 
 .skill-text img {
-  transition: 1.5s ease-in-out;
+  /* transition: 1.5s ease-in-out;
   padding: 0;
   height: 0;
-  width: 0;
+  width: 0; */
+  opacity: 50%;
+  transition: 1s ease-in-out;
+  padding: 10px 20px;
+  height: 50px;
+  width: 50px;
 }
 
 .skill-img span {
@@ -348,6 +367,7 @@ footer button {
   height: 0;
   width: 0;
   font-size: 0;
+  
 }
 
 .particles {
@@ -367,3 +387,4 @@ footer button {
   left: 0;
   z-index: -2;
 }
+
