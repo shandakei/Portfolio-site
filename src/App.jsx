@@ -23,25 +23,6 @@ function App() {
     hidden: { opacity: 0, height: 0, display: 'none' }
   }
 
-  
-
-  const skills = [
-    { name: 'HTML', img: 'public/html.png' },
-    { name: 'CSS', img: 'public/css.png' },
-    { name: 'JavaScript', img: 'public/java-script.png' },
-    { name: 'REACT', img: 'public/react.png' },
-    { name: 'GitHub', img: 'public/github.png' },
-    { name: 'Express', img: 'public/express.png' },
-    { name: 'Jest', img: 'public/jest.png' },
-    { name: 'Nodejs', img: 'public/nodejs.png' },
-    { name: 'Database', img: 'public/database.png' },
-    // { name: '', img: '/public/non-relational.png' },
-    { name: 'Postgress', img: 'public/postgress.png' },
-    { name: 'MongoDB', img: 'public/mongodb.png' },
-    { name: 'Miro', img: 'public/miro.png' },
-    { name: 'Trello', img: 'public/trello.png' }
-  ]
-  
   const scrollToSection = (id, className) => {
     let element = null
     if (id) {
@@ -52,6 +33,26 @@ function App() {
     }
     element.scrollIntoView({ behavior: 'smooth' });
   };
+
+
+  const skills = [
+    { name: 'JavaScript', img: 'public/java-script.png' },
+    { name: 'REACT', img: 'public/react.png' },
+    { name: 'HTML', img: 'public/html.png' },
+    { name: 'CSS', img: 'public/css.png' },
+    { name: 'Express', img: 'public/express.png' },
+    { name: 'API', img: 'public/api.png' },
+    { name: 'Jest', img: 'public/jest.png' },
+    { name: 'Mocha', img: 'public/mocha.png' },
+    { name: 'Nodejs', img: 'public/nodejs.png' },
+    { name: 'Database', img: 'public/database.png' },
+    { name: 'Postgress', img: 'public/postgress.png' },
+    { name: 'MongoDB', img: 'public/mongodb.png' },
+    { name: 'GitHub', img: 'public/github.png' },
+    { name: 'Miro', img: 'public/miro.png' },
+    { name: 'Trello', img: 'public/trello.png' },
+    { name: 'Figma', img: 'public/figma.png' },
+  ]
 
 
   return (
@@ -106,16 +107,18 @@ function App() {
           <h3>Skills</h3>
 
 
-          <div className='skills'>
-            {skills.map((skill) => (
+          <div className='skills'
+              onMouseLeave={() => {
+                setTimeout(() => setIsHovered(false), 300)
+              }}
+              onMouseEnter={() => setIsHovered(true)}
+              >
+
+              {skills.map((skill) => (
               <motion.div
           
                 className={isHovered ? 'skill-text' : 'skill-img'}
                 key={skill.name}
-                onMouseLeave={() => {
-                  setTimeout(() => setIsHovered(false), 300)
-              }}
-                onMouseEnter={() => setIsHovered(true)}
                 >
                 <motion.img
                   src={skill.img}
@@ -139,19 +142,19 @@ function App() {
 
           <div className='further-reading'>
             <img src="public/petrol.png" ></img>
-            <section><h3>Petrol Location App</h3>Collaborated on a group project using GitHub to develop a single-page application (SPA) for locating and finding information about petrol stations. The app features an interactive map powered by multiple Google API services, allowing users to search and filter stations by postcode or coordinates. Sidebars enhance usability with search and filter functions. While currently deployed in Melbourne, Australia, the database supports global searches. The user interface provides comprehensive details about each station, including owner information, status, and address, ensuring a user-friendly and informative experience.</section>
+            <section><h3>Petrol Location App</h3><p>Collaborated on a group project using GitHub to develop a single-page application (SPA) for locating and finding information about petrol stations. The app features an interactive map powered by multiple Google API services, allowing users to search and filter stations by postcode or coordinates. Sidebars enhance usability with search and filter functions. While currently deployed in Melbourne, Australia, the database supports global searches. The user interface provides comprehensive details about each station, including owner information, status, and address, ensuring a user-friendly and informative experience.</p></section>
 
-            <section><h3>Xiao'Er - Interactive Novel</h3>Developed an interactive novel leveraging React, HTML, CSS, and JavaScript. This project includes multiple branching storylines where user choices influence the plot's direction and outcomes. The narrative features character interactions and multiple endings, encouraging readers to explore different paths. Progress-saving functionality allows users to pick up where they left off, and unlockable content provides additional layers to the story. The interface is designed to be engaging and intuitive, ensuring users maintain their immersion as the plot continues.</section>
+            <section><h3>Xiao'Er - Interactive Novel</h3><p>Developed an interactive novel leveraging React, HTML, CSS, and JavaScript. This project includes multiple branching storylines where user choices influence the plot's direction and outcomes. The narrative features character interactions and multiple endings, encouraging readers to explore different paths. Progress-saving functionality allows users to pick up where they left off, and unlockable content provides additional layers to the story. The interface is designed to be engaging and intuitive, ensuring users maintain their immersion as the plot continues.</p></section>
             <img src="public/novel.png" ></img>
             
             <img src="public/comican.png" ></img>
-            <section><h3>Comican - Multiple File CRUD </h3>For this CRUD app, a platform was created where users can upload and share their fan art, comics, manga, doujinshi, and other creative works. Users can click on the title of a post to view a detailed page, which may include multiple files and images that can also be viewed as original source images. <br /> Once registered, users can freely add, edit, delete, and favourite posts without any limitations on the number of uploads or file size restrictions (though larger uploads may take longer to sync). Whether users are active posters or avid readers, they are encouraged to engage and share their thoughts in the post comment sections.</section>
+            <section><h3>Comican - Multiple File CRUD </h3><p>For this CRUD app, a platform was created where users can upload and share their fan art, comics, manga, doujinshi, and other creative works. Users can click on the title of a post to view a detailed page, which may include multiple files and images that can also be viewed as original source images. <br /> Once registered, users can freely add, edit, delete, and favourite posts without any limitations on the number of uploads or file size restrictions (though larger uploads may take longer to sync). Whether users are active posters or avid readers, they are encouraged to engage and share their thoughts in the post comment sections.</p></section>
             
-            <section><h3>Arcade X's & O's - SPA </h3>This two-player web application is designed for shared play on a single device. The start screen welcomes users, and with a simple click on the start button, they can dive straight into the game. At the conclusion of each round, players can press the "Play Again" button to keep track of the rounds played without needing to reload the page. Additionally, a music player toggle at the top enhances the gaming atmosphere.</section>
+            <section><h3>Arcade X's & O's - SPA </h3><p>This two-player web application is designed for shared play on a single device. The start screen welcomes users, and with a simple click on the start button, they can dive straight into the game. At the conclusion of each round, players can press the "Play Again" button to keep track of the rounds played without needing to reload the page. Additionally, a music player toggle at the top enhances the gaming atmosphere.</p></section>
             <img src="public/startscreen.png" ></img>
    
             <img src="public/omdb.jpg" ></img>
-            <section><h3>PSQL - OMDB</h3>This live page showcases a user-friendly site for searching movies by title, using data from the OMDB API. Users can find detailed information on single or multiple movies, including ratings, plot summaries, and cast lists. The interface is designed to be intuitive, providing a seamless experience for retrieving and displaying additional data like director names, release dates, and genres. Other versions of this project, utilizing different APIs such as TMDB API, are also available.</section>
+            <section><h3>PSQL - OMDB</h3><p>This live page showcases a user-friendly site for searching movies by title, using data from the OMDB API. Users can find detailed information on single or multiple movies, including ratings, plot summaries, and cast lists. The interface is designed to be intuitive, providing a seamless experience for retrieving and displaying additional data like director names, release dates, and genres. Other versions of this project, utilizing different APIs such as TMDB API, are also available.</p></section>
             
             <div className='contact-scroll'></div>
           </div>
@@ -191,7 +194,10 @@ function App() {
           <a href='https://generalassemb.ly/' target='_blank'>Study with General Assembly</a>
           {/* <a href=''>something</a> */}
 
-          <button onClick={() => scrollToSection(null, 'profile')} ><img src="public/up-arrow.png" alt="up-arrow-image-scroll-to-top" /></button>
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <img src="public/up-arrow.png" alt="up-arrow-image-scroll-to-top" />
+          </button>
+
         </footer>
 
         

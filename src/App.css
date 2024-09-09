@@ -206,6 +206,14 @@ h3 {
   align-content: center;
   
 }
+.about {
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.about:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
 
 .about h2 {
   display: flex;
@@ -226,7 +234,8 @@ h3 {
   padding-top: 80px;
   width: 90%;
   font-size: 1rem;
-  gap:40px;
+  gap:60px;
+  max-height: 2300px;
 }
 
 .further-reading img {
@@ -235,12 +244,32 @@ h3 {
   padding-bottom: 50px;
 }
 
+.further-reading img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.further-reading img:hover {
+  transform: scale(1.1);
+  
+}
+
 .further-reading a {
   padding-top: 30px;
 }
 
 .further-reading section {
   padding-bottom: 20px;
+}
+
+.further-reading section p {
+  /* padding-bottom: 20px; */
+  display: none;
+}
+
+.further-reading section:hover p {
+  transition: transform 0.3s ease-in-out;
+  /* padding-bottom: 20px; */
+  display: block;
 }
 
 .contact {
@@ -323,10 +352,11 @@ footer button {
 
 .skills {
   display: flex;
+  flex-wrap: wrap;
   width: 80%;
   justify-content: center;
-  padding-bottom: 50px;
-  height: 100px;
+  /* padding-bottom: 200px; */
+  height: 300px;
   font-size: 20px;
   
 }
