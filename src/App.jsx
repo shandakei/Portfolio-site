@@ -120,7 +120,7 @@ function App() {
             <h3>Hello! My name is</h3>
             <h1>Alexander Klaus Kampfer</h1>         
             <h2>Software Engineering</h2>
-          <a href="https://drive.google.com/file/d/1rCAZd542uz9gczLmfzkien5tUq5CDq7l/view?usp=sharing" target='_blank'><p>Click here for my Resume</p></a>
+          <a href="https://www.canva.com/design/DAGS2FL-UH4/RomQtnOCUtX05MXhm53X7w/edit?utm_content=DAGS2FL-UH4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target='_blank'><p>Click here for my Resume</p></a>
             </section>
           </div>
           <section>
@@ -172,7 +172,11 @@ function App() {
           </div>
 
           <div className='further-reading'>
-            <img src="public/petrol.png" ></img>
+            
+            <section onClick={toggleTextVisibility}><h3>ChiroOceaniaHub</h3><p>Built ChiroOceaniaHub, a single-page application (SPA) designed for chiropractors in Oceania to access seminar schedules, register for events, and manage memberships. The project leveraged React for a dynamic user interface, Render for deployment, and PostgreSQL for robust data storage. It features role-based authentication, RESTful API integration, and responsive design to ensure seamless user experience across devices. ChiroOceaniaHub centralises professional development resources for the chiropractic community.</p></section>
+            <a href='https://chiroseminarhub-australia.onrender.com/' target='_blank'><img src="public/chiroseminars.png" ></img></a>
+
+            <a href='https://melb-petrol-app.onrender.com/' target='_blank'><img src="public/petrol.png" ></img></a>
             <section onClick={toggleTextVisibility}><h3>Petrol Location App</h3><p>Collaborated on a group project using GitHub to develop a single-page application (SPA) for locating and finding information about petrol stations. The app features an interactive map powered by multiple Google API services, allowing users to search and filter stations by postcode or coordinates. Sidebars enhance usability with search and filter functions. While currently deployed in Melbourne, Australia, the database supports global searches. The user interface provides comprehensive details about each station, including owner information, status, and address, ensuring a user-friendly and informative experience.</p></section>
 
             <section onClick={toggleTextVisibility}><h3>Xiao'Er - Interactive Novel</h3><p>Developed an interactive novel leveraging React, HTML, CSS, and JavaScript. This project includes multiple branching storylines where user choices influence the plot's direction and outcomes. The narrative features character interactions and multiple endings, encouraging readers to explore different paths. Progress-saving functionality allows users to pick up where they left off, and unlockable content provides additional layers to the story. The interface is designed to be engaging and intuitive, ensuring users maintain their immersion as the plot continues.</p></section>

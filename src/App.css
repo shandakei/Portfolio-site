@@ -30,6 +30,7 @@ body {
 
 html, body {
   overflow-x: hidden;
+  background-color: var(--background-color);
 }
 
 /* Chrome, Safari, Edge */
@@ -527,12 +528,6 @@ footer button {
   .further-reading img {
     display: none;
   }
-}
-
-@media (max-width: 320px) {
-  .profile {
-    padding: 5px;
-  }
 
   .skills {
     display: grid; 
@@ -541,6 +536,13 @@ footer button {
     margin-bottom: 30px;
     justify-items: center;
   }
+}
+
+@media (max-width: 320px) {
+  .profile {
+    padding: 5px;
+  }
+
 
   .skill-img, .skill-text {
     width: 40px;
