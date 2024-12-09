@@ -296,6 +296,7 @@ h3 {
 
 .further-reading a {
   padding-top: 30px;
+  cursor: pointer;
 }
 
 .further-reading section {
