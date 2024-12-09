@@ -316,6 +316,7 @@ h3 {
 .further-reading h3 {
   text-decoration: underline;
   color: #14b5dd;
+  cursor: pointer;
 }
 
 .contact {
