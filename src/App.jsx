@@ -193,7 +193,7 @@ function App() {
             
             <div className='contact-scroll'></div>
           </div>
-
+            
         </div>
         <div className="contact">
           <h2>Contact</h2>
