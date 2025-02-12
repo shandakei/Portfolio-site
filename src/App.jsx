@@ -120,7 +120,7 @@ function App() {
             <h3>Hello! My name is</h3>
             <h1>Alexander Klaus Kampfer</h1>         
             <h2>Software Engineering</h2>
-          <a href="https://www.canva.com/design/DAGS2FL-UH4/RomQtnOCUtX05MXhm53X7w/edit?utm_content=DAGS2FL-UH4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target='_blank'><p>Click here for my Resume</p></a>
+          <a href="https://docs.google.com/document/d/1p9JtXxaIrNNTyJ-b2NhtcO8IW2c23U1NjiEisQLGuiM/edit?usp=sharing" target='_blank'><p>Click here for my Resume</p></a>
             </section>
           </div>
           <section>
