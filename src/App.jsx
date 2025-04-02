@@ -120,7 +120,7 @@ function App() {
             <h3>Hello! My name is</h3>
             <h1>Alexander Klaus Kampfer</h1>         
             <h2>Software Engineering</h2>
-          <a href="https://docs.google.com/document/d/1p9JtXxaIrNNTyJ-b2NhtcO8IW2c23U1NjiEisQLGuiM/edit?usp=sharing" target='_blank'><p>Click here for my Resume</p></a>
+          <a href="https://docs.google.com/document/d/1vXVhXuQ_cMEgm_20yMYQP27MOD7CM6vNjw-kc5MPceY/edit?usp=sharing" target='_blank'><p>Click here for my Resume</p></a>
             </section>
           </div>
           <section>
@@ -165,10 +165,10 @@ function App() {
 
 
           <div className="about">
-            <h2>About</h2>
-            <p>I previously worked in teaching, management, and business. Currently, I'm a General Assembly graduate, focused on building my career as a software engineer in Sydney.</p>
-            <p>I recently returned to Australia after spending my life working and studying overseas. With European and Asian backgrounds, I'm adaptable to new cultures and work environments. Having lived in London, Johannesburg, and Shanghai, and with family in several other countries,  I've internalized an international perspective.</p>
-            <p>Lately, I've been focused on React and stream functions. Along with sharpening my skills in fundamentals, I'm excited about upcoming collaborative projects with other alumni where I'll be working with new languages and tools.</p>
+            <h2>About Me</h2>
+            <p>Previously in teaching, management, and business, I’ve since pivoted into software engineering after graduating from General Assembly. Now based in Sydney, I’m focused on full-stack development and expanding my tech stack.</p>
+            <p>After years working and studying across London, Johannesburg, and Shanghai, I bring a global mindset and adaptability to every project. With a blend of European and Asian heritage, I’m at ease in fast-paced, multicultural environments.</p>
+            <p>Lately, I’ve been diving into React Native and Python, and streamlining workflows with functional programming. I’m currently working with fellow alumni and UX developers on collaborative projects involving new tools and languages—always learning, always building.</p>
           </div>
 
           <div className='further-reading'>
@@ -227,8 +227,12 @@ function App() {
           <p>© {new Date().getFullYear()} Alexander Kampfer. All rights reserved.</p>
           <p>
             Built with <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">React</a> & Vite.  
-            Last updated: October 2024.
+            Last updated: March 2025.
           </p>
+          
+          <a href='https://generalassembly.badgr.com/my-badges/badges/67649203a9671977155d2a1f' target='blank' className='ga-badge'>
+            <img src='public/GA-badge.png' className='ga-badge'></img>
+          </a>
           <a href="https://generalassemb.ly/" target="_blank" rel="noopener noreferrer">
             Study with General Assembly
           </a>

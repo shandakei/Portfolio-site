@@ -379,7 +379,7 @@ h3 {
 
 footer {
   display: grid;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 6fr 3fr;
   align-items: center;
   text-align: center;
 }
@@ -440,6 +440,12 @@ footer button {
   height: 0;
   width: 0;
   font-size: 0;
+}
+
+.ga-badge {
+  min-height: 100px;
+  min-width: 100px;
+  margin-top: 10px;
 }
 
 
@@ -572,5 +578,7 @@ footer button {
   .contact a, .contact span {
     word-break: break-word;
   }
+  
+  
 }
 
